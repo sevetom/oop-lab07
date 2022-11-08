@@ -21,7 +21,6 @@ import java.util.Comparator;
  * </p>
  */
 public interface MonthSorter {
-
     /**
      * Provides a comparator that sorts months by number of days.
      *
