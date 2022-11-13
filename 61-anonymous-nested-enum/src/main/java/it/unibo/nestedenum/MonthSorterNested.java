@@ -30,12 +30,11 @@ public final class MonthSorterNested implements MonthSorter {
 
         public static Month fromString(String name) {
             Objects.requireNonNull(name);
-            name = name.toLowerCase();
-            System.out.println(name);
             try {
                 return valueOf(name);
             } catch (IllegalArgumentException e) {
                 Month matched = null;
+                name = name.toLowerCase();
                 for (final Month month : values()) {
                     final String m = month.toString().toLowerCase();
                     if (m.startsWith(name)) {
